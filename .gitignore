@@ -1,0 +1,11 @@
+# Terraform related
+*.auto.tfvars
+*.terraform
+terraform.tfstate*
+.terraform*
+
+# Internal versions of the design files
+*.drawio
+
+# SSH Keys Generated via Terraform for k3s nodes
+*.pem

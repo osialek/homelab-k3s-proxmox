@@ -1,0 +1,7 @@
+proxmox_api_url       = "https://192.168.1.111:8006/" # IP or resolvable DNS to proxmox API
+proxmox_api_username  = "username" # Username with given access and right permissions to the proxmox
+proxmox_api_token     = "username@pve!APITOKEN=1111111111111111" # Proxmo API token
+network_gateway       = "192.168.1.1" # Network gateway
+k3s_node_password     = "password" # Initial pwd for k3s nodes
+k3s_node_storage_size = 150
+k3s_token             = "asd24f3b113421Dasdcawd3cf9f24291232f92ac8fa1d9530e"
