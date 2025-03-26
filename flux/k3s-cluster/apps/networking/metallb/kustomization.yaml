@@ -1,0 +1,10 @@
+# apps/networking/metallb/kustomization.yaml
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+metadata:
+  name: metallb
+  namespace: metallb-system
+
+resources:
+  - https://raw.githubusercontent.com/metallb/metallb/v0.14.9/config/manifests/metallb-native.yaml
+  - addresspool.yaml
