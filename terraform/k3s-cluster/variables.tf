@@ -85,3 +85,29 @@ variable "k3s_token" {
   sensitive   = true
   description = "Shared secret token used to authenticate k3s nodes to the cluster"
 }
+
+
+##########################################
+## Flux related vars
+##########################################
+variable "github_owner" {
+  type        = string
+  description = "GitHub username or organization"
+}
+
+variable "github_repository" {
+  type        = string
+  description = "GitHub repository name"
+}
+
+variable "github_token" {
+  type        = string
+  sensitive   = true
+  description = "GitHub Personal Access Token with repo scope"
+}
+
+variable "github_branch" {
+  type        = string
+  default     = "main"
+  description = "GitHub branch to be used by flux"
+}

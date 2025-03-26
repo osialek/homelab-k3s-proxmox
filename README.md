@@ -6,14 +6,15 @@ Welcome to my homelab project! This repository documents the setup and configura
 
 - [x] Automated K3S nodes provisioning on the Proxmox Cluster w/ Terraform
 - [x] Automated K3S installation and configuration
-- [ ] Synology NAS integration with K3S cluster via NFS CSI Driver
+- [x] Synology NAS integration with K3S cluster via NFS CSI Driver
 - [ ] Homelab page w/ [Homepage](https://gethomepage.dev/)
-- [ ] GitOps with Flux for apps management
+- [x] GitOps with Flux for apps management
 - [ ] Zabbix node for detailed monitoring of Proxmox cluster and k3s workloads
   
 ## Applications/Software used
 
 - [x] NFS-CSI-DRIVER
+- [x] MetalLB
 - [ ] Homepage
 - [ ] NGINX Ingressclass
 - [ ] Zabbix
@@ -80,6 +81,7 @@ TBD
     - SSH-Key is added to the keychain on your PC
     - User is created on the proxmox host where the VM is supposed to be deployed
     - Reference [docs](https://registry.terraform.io/providers/bpg/proxmox/latest/docs#ssh-user) on how to set up SSH user for proxmox SSH connection\
+- Flux CLI is installed on your machine
 
 ### Troubleshooting Terraform
 
