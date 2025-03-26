@@ -3,18 +3,3 @@ kind: Kustomization
 resources:
   - helmrelease.yaml
   - nfs-sc.yaml
-patches:
-  - target:
-      kind: StorageClass
-      name: nfs-csi
-    patch: |-
-      - op: add
-        path: /metadata/annotations/storageclass.kubernetes.io/is-default-class
-        value: "true"
-  # - target:
-  #     kind: StorageClass
-  #     name: local-path
-  #   patch: |-
-  #     - op: add
-  #       path: /metadata/annotations/storageclass.kubernetes.io/is-default-class
-  #       value: "false"
