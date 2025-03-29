@@ -6,7 +6,7 @@ resources:
   - storageclass.yaml
 
 patches:
-  - patch: helmrelease-patch.yaml
+  - patch: patches/helmrelease-patch.yaml
     target:
       kind: HelmRelease
       name: csi-driver-nfs
