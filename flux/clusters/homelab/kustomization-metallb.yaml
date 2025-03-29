@@ -3,7 +3,13 @@ kind: Kustomization
 metadata:
   name: metallb-overlay
   namespace: flux-system
-
+spec:
+  interval: 10m
+  path: "./"
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
   resources:
     - ../../base/metallb
     - addresspool.yaml

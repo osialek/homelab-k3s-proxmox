@@ -3,6 +3,13 @@ kind: Kustomization
 metadata:
   name: ingress-nginx-overlay
   namespace: flux-system
+spec:
+  interval: 10m
+  path: "./"
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
 
 resources:
   - ../../base/ingress-nginx
