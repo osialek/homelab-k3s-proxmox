@@ -1,22 +1,13 @@
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
-metadata:
-  name: csi-driver-nfs-overlay
-  namespace: flux-system
-spec:
-  interval: 10m
-  prune: true
-  sourceRef:
-    kind: GitRepository
-    name: flux-system
 
-  resources:
-    - ../../../base/csi-driver-nfs
-    - storageclass.yaml
+resources:
+  - ../../../base/csi-driver-nfs
+  - storageclass.yaml
 
-  patches:
-    - patch: helmrelease-patch.yaml
-      target:
-        kind: HelmRelease
-        name: csi-driver-nfs
-        namespace: kube-system
+patches:
+  - patch: helmrelease-patch.yaml
+    target:
+      kind: HelmRelease
+      name: csi-driver-nfs
+      namespace: kube-system
