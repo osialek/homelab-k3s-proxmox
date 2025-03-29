@@ -6,8 +6,14 @@ resources:
   - storageclass.yaml
 
 patches:
-  - patch: patches/helmrelease-patch.yaml
-    target:
+  - patch: |-
+      apiVersion: helm.toolkit.fluxcd.io/v2
       kind: HelmRelease
-      name: csi-driver-nfs
-      namespace: kube-system
+      metadata:
+        name: csi-driver-nfs
+        namespace: kube-system
+      spec:
+        values:
+          nfs:
+            server: 192.168.1.121
+            share: /volume1/k3sdata
