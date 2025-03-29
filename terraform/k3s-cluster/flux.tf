@@ -14,7 +14,7 @@ resource "null_resource" "flux_bootstrap" {
         --owner="${var.github_owner}" \
         --repository="${var.github_repository}" \
         --branch=${var.github_branch} \
-        --path=flux/k3s-cluster \
+        --path=flux/clusters/homelab \
         --personal \
         --token-auth \
         --private=false
