@@ -14,3 +14,12 @@ spec:
         name: metallb
         namespace: flux-system
       interval: 15m
+---
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: HelmRepository
+metadata:
+  name: metallb
+  namespace: flux-system
+spec:
+  interval: 15m
+  url: https://metallb.github.io/metallb
