@@ -3,3 +3,9 @@ kind: Kustomization
 resources:
   - namespace.yaml
   - helm.yaml
+configMapGenerator:
+  - name: metallb-base-values
+    files:
+      - values.yaml
+configurations:
+  - kustomizeconfig.yaml

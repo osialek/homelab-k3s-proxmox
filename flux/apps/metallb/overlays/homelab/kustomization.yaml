@@ -3,5 +3,8 @@ kind: Kustomization
 namespace: metallb-system
 resources:
   - ../../base
+  - addresspool.yaml
 configMapGenerator:
   - name: metallb-overlay-values
+    files:
+      - values.yaml

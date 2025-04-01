@@ -13,7 +13,12 @@ spec:
         kind: HelmRepository
         name: metallb
         namespace: flux-system
-      interval: 15m
+  valuesFrom:
+    - kind: ConfigMap
+      name: metallb-base-values
+    - kind: ConfigMap
+      name: metallb-overlay-values
+      optional: true
 ---
 apiVersion: source.toolkit.fluxcd.io/v1
 kind: HelmRepository
