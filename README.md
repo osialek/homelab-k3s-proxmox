@@ -16,13 +16,13 @@ Welcome to my homelab project! This repository documents the setup and configura
 - [x] NFS-CSI-DRIVER
 - [x] MetalLB
 - [ ] Homepage
-- [ ] NGINX Ingressclass
+- [x] NGINX Ingressclass
 - [ ] Zabbix
 
 ### TODO:
 
 - replace proxmox provider user (currently root is used, as of issues with setting on access via ssh to the proxmox nodes for other user)
-- move state to AWS S3 backend with state lock in S3 (as of latest Terraform version capabilities)
+- implement NAS data backups to AWS S3
 
 # Homelab Overview
 
