@@ -25,3 +25,18 @@ spec:
   dependsOn:
     - name: metallb
   prune: true
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: ingress-nginx
+  namespace: flux-system
+spec:
+  interval: 5m
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  path: ./flux/apps/ingress-nginx/overlays/homelab
+  dependsOn:
+    - name: metallb-addresspool
+  prune: true
